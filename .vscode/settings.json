@@ -1,0 +1,22 @@
+{
+  "editor.wordWrapColumn": 120,
+  "html.format.wrapLineLength": 120,
+  "editor.rulers": [120],
+  "prettier.printWidth": 120,
+  "i18n-ally.annotationMaxLength": 120,
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 120,
+  "cSpell.words": ["daomtthuan"],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.*": false,
+    "**/node_modules": false,
+    "**/yarn.lock": false,
+    "**/babel.config.js": false,
+    "**/metro.config.js": false
+  }
+}

@@ -1,0 +1,5 @@
+import { FunctionComponent, PropsWithoutRef } from 'react';
+
+export type __NAME__Props = PropsWithoutRef<{}>;
+
+export type __NAME__Component = FunctionComponent<__NAME__Props>;

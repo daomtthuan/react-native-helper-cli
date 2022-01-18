@@ -1,0 +1,10 @@
+import { memo } from 'react';
+
+import { __NAME__Styles as styles } from './__FILE_NAME__.style';
+import { __NAME__Component } from './__FILE_NAME__.type';
+
+export const __NAME__: __NAME__Component = function () {
+  return <></>;
+};
+
+export const Memo__NAME__ = memo(__NAME__);
