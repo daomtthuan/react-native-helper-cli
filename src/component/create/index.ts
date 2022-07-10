@@ -2,16 +2,22 @@ import { existsSync, mkdirSync, rmSync } from 'fs';
 import Inquirer from 'inquirer';
 import { resolve } from 'path';
 
-import { createScssStyleComponentFile, createStyleSheetStyleComponentFile } from './component';
+import { createStyleComponentFile, createStyleSheetStyleComponentFile } from './component';
 import { createDefaultExportFile } from './export';
-import { createScssStyleFile, createStyleSheetStyleFile } from './style';
+import { createStyleFile, createStyleSheetStyleFile, StyleType } from './style';
 import { createDefaultTypeFile } from './type';
 
+/** StyleSheet Type */
 enum StylesheetType {
-  scss = 'SCSS',
-  StyleSheet = 'StyleSheet',
+  CSS = 'CSS',
+  SCSS = 'SCSS',
+  SASS = 'SASS',
+  StyleSheet = 'StyleSheet (React Native)',
 }
 
+/**
+ * Create Component
+ */
 export const createComponent = async () => {
   const { dir, fileName, componentName, type, style } = await Inquirer.prompt([
     {
@@ -34,7 +40,7 @@ export const createComponent = async () => {
       name: 'style',
       message: 'Stylesheet type?',
       choices: Object.values(StylesheetType),
-      default: StylesheetType.scss,
+      default: StylesheetType.CSS,
     },
   ]);
 
@@ -59,16 +65,23 @@ export const createComponent = async () => {
   }
   mkdirSync(componentDir);
 
-  switch (style) {
-    case StylesheetType.scss:
-      createScssStyleComponentFile(componentDir, fileName, componentName);
-      createScssStyleFile(componentDir, fileName);
-      break;
+  if (style == StylesheetType.StyleSheet) {
+    createStyleSheetStyleComponentFile(componentDir, fileName, componentName);
+    createStyleSheetStyleFile(componentDir, fileName);
+  } else {
+    let styleType = StyleType.CSS;
+    switch (style) {
+      case StylesheetType.SCSS:
+        styleType = StyleType.SCSS;
+        break;
 
-    case StylesheetType.StyleSheet:
-      createStyleSheetStyleComponentFile(componentDir, fileName, componentName);
-      createStyleSheetStyleFile(componentDir, fileName);
-      break;
+      case StylesheetType.SASS:
+        styleType = StyleType.SASS;
+        break;
+    }
+
+    createStyleComponentFile(componentDir, fileName, componentName, styleType);
+    createStyleFile(componentDir, fileName, styleType);
   }
 
   createDefaultTypeFile(componentDir, fileName, componentName);

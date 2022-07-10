@@ -1,8 +1,8 @@
 {
   "name": "daomtthuan-react-tools-cli",
-  "displayName": "React Tools CLI",
-  "version": "0.1.0",
-  "description": "React Tools CLI",
+  "displayName": "React Tools CLI - RTC",
+  "version": "0.1.1",
+  "description": "React / React Native project commands helper",
   "author": "Daomtthuan <daomtthuan@gmail.com> (https://github.com/daomtthuan)",
   "main": "index.ts",
   "bin": {

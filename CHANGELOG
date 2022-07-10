@@ -1,9 +1,29 @@
+<!-- markdownlint-disable MD024 -->
+
 # Changelog
 
 ## [v0.1.0] - 2022-01-19
 
-Init project
+Initial project
 
-### Added
+### For end-users
+
+#### Added
 
 - Create react component support SCSS StyleSheets and React Native StyleSheets
+
+## [v0.1.1] - 2022-07-11
+
+Upgrade and change logic
+
+### For end-users
+
+#### Added
+
+- Create React component with CSS/SASS StyleSheets
+
+### For developers
+
+### Changed
+
+- Change logic and project structure

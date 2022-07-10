@@ -2,11 +2,15 @@ import Inquirer from 'inquirer';
 
 import { createComponent } from './create';
 
+/** Component Group Action */
 enum ComponentAction {
   create = 'Create',
   back = 'Back',
 }
 
+/**
+ * Execute Component Group Action
+ */
 export const executeComponentGroupAction = async () => {
   const { action } = await Inquirer.prompt({
     type: 'list',
