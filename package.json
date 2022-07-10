@@ -1,7 +1,7 @@
 {
   "name": "daomtthuan-react-tools-cli",
   "displayName": "React Tools CLI - RTC",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React / React Native project commands helper",
   "author": "Daomtthuan <daomtthuan@gmail.com> (https://github.com/daomtthuan)",
   "main": "index.ts",
@@ -23,7 +23,7 @@
   },
   "homepage": "https://daomtthuan.github.io/react-tools-cli/",
   "repository": "https://github.com/daomtthuan/react-tools-cli.git",
-  "readme": "https://github.com/daomtthuan/react-tools-cli/blob/master/README.md",
+  "readme": "https://raw.githubusercontent.com/daomtthuan/react-tools-cli/main/README.md",
   "bugs": {
     "email": "daomtthuan@gmail.com",
     "url": "https://github.com/daomtthuan/react-tools-cli/issues"
@@ -33,7 +33,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/daomtthuan/react-tools-cli/blob/master/LICENSE"
+      "url": "https://raw.githubusercontent.com/daomtthuan/react-tools-cli/main/LICENSE"
     }
   ],
   "contributors": [
