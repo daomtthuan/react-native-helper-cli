@@ -7,5 +7,4 @@ export const writeTitle = function () {
   TITLE.forEach((line) => console.log(line));
   console.log(BREAK_LINE);
   console.log(DESCRIPTION);
-  console.log(BREAK_LINE);
 };

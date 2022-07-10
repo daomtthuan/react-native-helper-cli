@@ -15,6 +15,7 @@ enum ActionGroup {
 export const execute = async function () {
   let exit = false;
   while (!exit) {
+    console.log(BREAK_LINE);
     const { actionGroup } = await Inquirer.prompt({
       type: 'list',
       name: 'actionGroup',
@@ -22,7 +23,6 @@ export const execute = async function () {
       choices: Object.values(ActionGroup),
       default: ActionGroup.exit,
     });
-    console.log(BREAK_LINE);
 
     switch (actionGroup) {
       case ActionGroup.component:

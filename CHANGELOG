@@ -27,3 +27,17 @@ Upgrade and change logic
 ### Changed
 
 - Change logic and project structure
+
+## [v0.1.2] - 2022-07-11
+
+Fix UI and add guidelines
+
+### For end-users
+
+#### Added
+
+- Add README file
+
+#### Changed
+
+- Correct Break line
